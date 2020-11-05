@@ -16,6 +16,12 @@ document.querySelector('#create').addEventListener('click', function(){
     }
 })
 
+// Delete Button
+
+document.addEventListener('click', function(event){
+    const task = event.target;
+    myTaskManager.deleteTask(task);
+})
 // Validate Inputs
 
 function validateTaskForm(inputName, inputDescription, inputAssignedTo, inputDueDate, inputStatus){
@@ -62,6 +68,7 @@ class TaskManager {
                     <li class="list-group-item">Due Date: ${task.DueDate}</li>
                     <li class="list-group-item">Status: ${task.Status}</li>
                     </ul>
+                    <button type="button" class="btn btn-primary" deleteID="${task.TaskID}">Delete</button>
                     </div>
                     </div>`
     
@@ -80,11 +87,25 @@ class TaskManager {
     listHTMLRow.innerHTML += listHTML;
     }
 
-    deleteTask(){
+    deleteTask(task){
+        let taskID = task.parentNode.parentNode.attributes.taskID.value;
+        for(let i=0; i < this.tasks.length; i++){
+            if(this.tasks[i].ID = taskID){
+                this.tasks.splice(i,1)
+            }
+        }
 
+        task.parentNode.parentNode.parentNode.removeChild(task.parentNode.parentNode)
+
+        let taskList = document.querySelectorAll('a');
+        for(let i=0; i < taskList.length; i++){
+            task = taskList[i];
+            if(task.attributes.taskID.value == taskID){
+                task.parentNode.removeChild(task);
+            }
+        }
     }
 }
-
 let taskArray = [];
 
 let myTaskManager = new TaskManager(taskArray);
