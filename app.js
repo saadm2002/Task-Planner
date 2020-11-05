@@ -9,7 +9,7 @@ document.querySelector('#create').addEventListener('click', function(){
 
     let allValidations = validateTaskForm(inputName, inputDescription, inputAssignedTo, inputDueDate, inputStatus);
     if(allValidations == true){
-        createTask(inputName, inputDescription, inputAssignedTo, inputDueDate, inputStatus, taskArray);
+        createTask(inputName, inputDescription, inputAssignedTo, inputDueDate, inputStatus, myTaskManager.Tasks);
         let taskIndex = myTaskManager.tasks.length-1;
         console.log(myTaskManager.tasks[taskIndex]);
         myTaskManager.addTask(myTaskManager.tasks[taskIndex])
