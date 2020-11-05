@@ -53,7 +53,7 @@ class TaskManager {
     }
 
     getAllTask(){
-
+        console.log(this.tasks);
     }
 
     addTask(task){
@@ -97,15 +97,16 @@ class TaskManager {
 
         task.parentNode.parentNode.parentNode.removeChild(task.parentNode.parentNode)
 
-        let taskList = document.querySelectorAll('a');
-        for(let i=0; i < taskList.length; i++){
-            task = taskList[i];
-            if(task.attributes.taskID.value == taskID){
-                task.parentNode.removeChild(task);
-            }
-        }
+        //let taskList = document.querySelectorAll('a');
+        //for(let i=0; i < taskList.length; i++){
+          //  task = taskList[i];
+            //if(task.attributes.taskID.value == taskID){
+              //  task.parentNode.removeChild(task);
+           // }
+       // }
     }
 }
+
 let taskArray = [];
 
 let myTaskManager = new TaskManager(taskArray);
