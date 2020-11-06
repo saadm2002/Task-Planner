@@ -1,0 +1,20 @@
+#form {
+    margin-top: 20px;
+    margin-left: 170px;
+    padding: 20px;
+    width: 300px;
+    border: 2px solid black;
+}
+
+#taskList{
+    padding: 0px;
+    width: 600px;
+    margin-top: -350px;
+    margin-bottom: 150px;
+    margin-left: 650px;
+}
+.card {
+    border: 2px solid black;
+    margin-top: 200px;
+    margin-bottom: 20px;
+}
