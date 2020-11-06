@@ -21,23 +21,22 @@ function addButton(){
         myTaskManager.addTask(task);
     }
     console.log("done");
-    document.getElementById("form").reset();
 };
 
 
 // Delete Button
 
 document.addEventListener('click', function(event){
-    
-    const isButton = (event.target.nodeName == 'BUTTON');
-    
+    let isButton = event.target.classList.contains('btn') ? true : false;
+
     let button = event.target;
     if(isButton == true){
-        console.log("button pressed!");
+        console.log(button.getAttribute('id'));
         if(button.getAttribute('id') == "create"){
             addButton();
-            
+            console.log("create button clicked")
         } else if (button.getAttribute('role') == "delete") {
+            console.log("delete button pressed")
             const task = event.target;
             myTaskManager.deleteTask(task);
         }
