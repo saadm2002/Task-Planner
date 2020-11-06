@@ -97,13 +97,13 @@ class TaskManager {
 
         task.parentNode.parentNode.parentNode.removeChild(task.parentNode.parentNode)
 
-        //let taskList = document.querySelectorAll('a');
-        //for(let i=0; i < taskList.length; i++){
-          //  task = taskList[i];
-            //if(task.attributes.taskID.value == taskID){
-              //  task.parentNode.removeChild(task);
-           // }
-       // }
+        let taskList = document.querySelectorAll('a');
+        for(let i=0; i < taskList.length; i++){
+            task = taskList[i];
+            if(task.attributes.taskID.value == taskID){
+                task.parentNode.removeChild(task);
+            }
+        }
     }
 }
 
