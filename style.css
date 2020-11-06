@@ -1,9 +1,33 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+
+.background {
+    background-image: url("background.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }  
+
+.container{
+}
+
+#jumbotron {
+    background-color: silver;
+}
+
 #form {
     margin-top: 20px;
-    margin-left: 170px;
+    margin-left: 60px;
     padding: 20px;
-    width: 300px;
-    border: 2px solid black;
+    width: 240px;
+    background-color: silver;
+}
+
+#create {
+    margin-left: 40px;
 }
 
 #taskList{
@@ -16,5 +40,5 @@
 .card {
     border: 2px solid black;
     margin-top: 200px;
-    margin-bottom: 20px;
+    background-color: silver;
 }
