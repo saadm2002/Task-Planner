@@ -20,8 +20,8 @@ function addButton(){
         // console.log(myTaskManager.tasks[taskIndex]);
         myTaskManager.addTask(task);
     }
-
     console.log("done");
+    document.getElementById("form").reset();
 };
 
 
